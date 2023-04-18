@@ -1,7 +1,7 @@
 {
-  "name": "searchland",
+  "name": "frontend",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/searchland/src",
+  "sourceRoot": "apps/frontend/src",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,7 +9,7 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/searchland"
+        "outputPath": "dist/apps/frontend"
       },
       "configurations": {
         "development": {
@@ -24,15 +24,15 @@
       "executor": "@nrwl/vite:dev-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "searchland:build"
+        "buildTarget": "frontend:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "searchland:build:development",
+          "buildTarget": "frontend:build:development",
           "hmr": true
         },
         "production": {
-          "buildTarget": "searchland:build:production",
+          "buildTarget": "frontend:build:production",
           "hmr": false
         }
       }
@@ -41,36 +41,36 @@
       "executor": "@nrwl/vite:preview-server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "searchland:build"
+        "buildTarget": "frontend:build"
       },
       "configurations": {
         "development": {
-          "buildTarget": "searchland:build:development"
+          "buildTarget": "frontend:build:development"
         },
         "production": {
-          "buildTarget": "searchland:build:production"
+          "buildTarget": "frontend:build:production"
         }
       }
     },
     "test": {
       "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/apps/searchland"],
+      "outputs": ["coverage/apps/frontend"],
       "options": {
         "passWithNoTests": true,
-        "reportsDirectory": "../../coverage/apps/searchland"
+        "reportsDirectory": "../../coverage/apps/frontend"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/searchland/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/frontend/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "serve-static": {
       "executor": "@nrwl/web:file-server",
       "options": {
-        "buildTarget": "searchland:build"
+        "buildTarget": "frontend:build"
       }
     }
   },
