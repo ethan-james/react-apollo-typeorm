@@ -9,7 +9,7 @@ const StyledApp = styled.div`
 `;
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000',
+  uri: import.meta.env.VITE_GRAPHQL_URL,
   cache: new InMemoryCache(),
 });
 

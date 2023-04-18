@@ -8,13 +8,17 @@
 
 Run `yarn install` in the root to install everything needed for the integrated monorepo.
 
+## Environment variables
+
+Run `echo "VITE_GRAPHQL_URL=http://localhost:4000" >> .env` to set the URL for the development GraphQL server.
+
 ## Development server (backend)
 
-Run `nx serve backend` for a dev server. Navigate to http://localhost:4000/ to see the GraphQL playground. The app will automatically reload if you change any of the source files.
+Run `yarn nx serve backend` for a dev server. Navigate to http://localhost:4000/ to see the GraphQL playground. The app will automatically reload if you change any of the source files.
 
 ## Development server (front end)
 
-Run `nx serve frontend` for a dev server. Navigate to http://localhost:4200/ to see the React app. The app will automatically reload if you change any of the source files.
+Run `yarn nx serve frontend` for a dev server. Navigate to http://localhost:4200/ to see the React app. The app will automatically reload if you change any of the source files.
 
 ## Understand this workspace
 
